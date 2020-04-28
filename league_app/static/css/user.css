@@ -1,0 +1,13 @@
+#mainNavbar {
+    text-decoration: underline;
+    background-color: darkslategray;
+    opacity: 0.8;
+    text-decoration: none;
+    
+}
+
+#mainNavbar a {
+    color: white;
+    text-transform: capitalize;
+    text-decoration: none;
+}
