@@ -53,3 +53,16 @@ def user_page(request):
         
     }
     return render(request, "user_page.html", context)
+def champions_page(request):
+    if 'loggedinId' not in request.session:
+        return redirect('login')
+    loggedinUser = User.objects.get(id = request.session['loggedinId'])
+    context = {
+        "loggedinUser": loggedinUser,
+        
+    }
+    return render(request, "champions.html", context)
+
+def logout(request):
+    request.session.clear()
+    return redirect('/login')

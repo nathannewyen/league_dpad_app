@@ -1,0 +1,24 @@
+#mainNavbar {
+    text-decoration: underline;
+    background-color: darkslategray;
+    opacity: 0.8;
+    text-decoration: none;
+    
+}
+
+#mainNavbar a {
+    color: white;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+.jumbotron{
+    background-image: url(https://www.jakpost.travel/wimages/large/8-87801_league-of-legends-champions-wallpaper-hd.jpg);
+    background-repeat: no-repeat;
+    background: cover;
+    background-size: 100%;
+    color: white;
+    
+}
+
+
