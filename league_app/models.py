@@ -57,3 +57,14 @@ class User(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     objects = UserManager()
+
+
+class Champion(models.Model):
+    name = models.CharField(max_length = 255)
+    winRate = models.FloatField(max_length = 6)
+    pickRate = models.FloatField(max_length = 6)
+    banRate = models.FloatField(max_length = 6)
+    champClass = models.CharField(max_length = 255)
+    champType = models.CharField(max_length = 50)
+    created_at=models.DateTimeField(auto_now_add = True)
+    updated_at=models.DateTimeField(auto_now = True)
