@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
-from .models import User
+from .models import *
 import bcrypt
 
 # Create your views here.
@@ -53,6 +53,7 @@ def user_page(request):
         
     }
     return render(request, "user_page.html", context)
+    
 def champions_page(request):
     if 'loggedinId' not in request.session:
         return redirect('login')
@@ -66,3 +67,9 @@ def champions_page(request):
 def logout(request):
     request.session.clear()
     return redirect('/login')
+
+def champ_info(request, id):
+    context = {
+        'champion': Champion.objects.get(id = id),
+    }
+    return render(request, "Champ_info.html", context)
